@@ -1,0 +1,5 @@
+# plugin > .ignore 설치 후, 인텔리제이 재시작 > gitignore 생성
+
+
+.gradle
+.idea
