@@ -15,7 +15,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
    스프링 컨테이너에 빈을 추가하기 위한 설정 파일 로드를 위한 어노테이션.
    객체를 직접 만들지 않으므로 붙여준다. */
 @ContextConfiguration(classes = HelloController.class)
-@WebMvcTest(controllers = HelloController.class)
+@WebMvcTest(controllers = HelloController.class)    // 해당 어노테이션은 JPA 기능이 작동하지 않는다.
 public class HelloControllerTest {
 
     @Autowired
