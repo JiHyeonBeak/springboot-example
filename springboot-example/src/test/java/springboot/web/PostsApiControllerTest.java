@@ -91,6 +91,7 @@ public class PostsApiControllerTest {
         //when
         ResponseEntity<Long> responseEntity = restTemplate.exchange(url, HttpMethod.PUT, requestEntity, Long.class);
 
+
         //then
         Assertions.assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         Assertions.assertThat(responseEntity.getBody()).isGreaterThan(0L);
