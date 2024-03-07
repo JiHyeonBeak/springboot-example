@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor  // 롬복 어노테이션, 기본 생성자 자동 추가
 @Entity // 실제 DB 테이블과 매칭될 클래스 선언. (테이블과 링크, 카멜케이스 클래스명을 DB의 언더스코어 네이밍으로 매칭)
-public class Posts {
+public class Posts extends BaseTimeEntity{
 
     @Id // Posts 테이블의 PK 필드 선언
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙을 나타낸다.
