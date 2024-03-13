@@ -1,8 +1,10 @@
 package com.pigsheep.book.springboot.web;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@RequiredArgsConstructor
 @Controller
 public class IndexController {
 
@@ -12,4 +14,10 @@ public class IndexController {
         // View Resolver가 /src/main/resources/templates/index.mustache를 호출하게 된다.
         return "index";
     }
+
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
+    }
+
 }
