@@ -3,12 +3,13 @@
 // 공동 작업시, 함수명 중복으로 인한 오류를 피하기 위한 구조.
 
 let main = {
-    init : function () {
-        let _this = this;
-        $('#btn-save').on('click', function () {
-            _this.save();
-        });
-    },
+    // 핸들러가 안 먹음... 일단 닫는다.
+    // init : function () {
+    //     let _this = this;
+    //     $('#btn-save').on('click', function () {
+    //         _this.save();
+    //     });
+    // },
     save : function() {
         let data = {
             title: $('#title').val(),
