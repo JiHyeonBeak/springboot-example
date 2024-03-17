@@ -11,7 +11,6 @@ let main = {
     //     });
     // },
     save : function() {
-        console.log("테스트에요");
         let data = {
             title: $('#title').val(),
             author: $('#author').val(),
