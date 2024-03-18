@@ -8,12 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PostsUpdateRequestDto {
 
-    private String tilte;
+    private String title;
     private String content;
 
     @Builder
-    public PostsUpdateRequestDto(String tilte, String content) {
-        this.tilte = tilte;
+    public PostsUpdateRequestDto(String title, String content) {
+        this.title = title;
         this.content = content;
     }
 }
