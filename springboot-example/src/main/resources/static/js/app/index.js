@@ -11,6 +11,9 @@ let main = {
         $('#btn-update').on('click', function () {
             _this.update();
         });
+        $('#btn-delete').on('click', function () {
+            _this.delete();
+        });
     },
     save : function() {
         let data = {
@@ -46,6 +49,20 @@ let main = {
             data: JSON.stringify(data)  // js array object to JSON
         }).done(function () {   // 성공시
             alert("글이 수정됐습니다.");
+            window.location.href = '/'; // 메인페이지로 이동
+        }).fail(function (error) {  // 에러 예외처리
+            alert(JSON.stringify(error));
+        });
+    },
+    delete : function () {
+        let id = $('#id').val();
+        $.ajax({
+            type: 'DELETE',
+            url: '/api/v1/posts/'+id,
+            dataType: 'json',
+            contentType: 'application/json; charset=utf-8'
+        }).done(function () {   // 성공시
+            alert("글이 삭제됐습니다.");
             window.location.href = '/'; // 메인페이지로 이동
         }).fail(function (error) {  // 에러 예외처리
             alert(JSON.stringify(error));
