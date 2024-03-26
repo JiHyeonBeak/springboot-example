@@ -23,6 +23,7 @@ public class SecurityConfig {
 
     @Bean
     protected SecurityFilterChain webSecurityFilterChain(HttpSecurity http) throws Exception {
+<<<<<<< HEAD
         http.csrf().disable()
                 .headers().frameOptions().disable()
                 .and()
@@ -35,6 +36,8 @@ public class SecurityConfig {
                 .logoutSuccessUrl("/");
 
             return http.build();
+=======
+>>>>>>> 33b5d5b0e5ba7f77593f8b5c74f1e1eabe5bf655
     }
 
 
